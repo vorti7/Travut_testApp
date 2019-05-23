@@ -1,0 +1,16 @@
+projects:
+  travelerapps:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        graphQLApiId: p7yfv5fj7rhv3lgvfq6hxu6zg4
+      endpoints:
+        prod: >-
+          https://5afgahqbrfftfmsfvnsfwr5xbq.appsync-api.ap-northeast-1.amazonaws.com/graphql

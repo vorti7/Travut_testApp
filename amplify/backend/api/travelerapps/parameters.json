@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "travelerapps",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognito838d73a9",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

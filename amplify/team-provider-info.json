@@ -1,0 +1,36 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "travuttravelerapps-20190425154249-authRole",
+            "UnauthRoleArn": "arn:aws:iam::035764117684:role/travuttravelerapps-20190425154249-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::035764117684:role/travuttravelerapps-20190425154249-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "travuttravelerapps-20190425154249-deployment",
+            "UnauthRoleName": "travuttravelerapps-20190425154249-unauthRole",
+            "StackName": "travuttravelerapps-20190425154249",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:035764117684:stack/travuttravelerapps-20190425154249/582d5e90-6725-11e9-9f2f-0a0143fecb7c"
+        },
+        "categories": {
+            "auth": {
+                "cognito838d73a9": {}
+            }
+        }
+    },
+    "dkdev": {
+        "awscloudformation": {
+            "AuthRoleName": "travuttravelerapps-20190510113338-authRole",
+            "UnauthRoleArn": "arn:aws:iam::353058605715:role/travuttravelerapps-20190510113338-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::353058605715:role/travuttravelerapps-20190510113338-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "travuttravelerapps-20190510113338-deployment",
+            "UnauthRoleName": "travuttravelerapps-20190510113338-unauthRole",
+            "StackName": "travuttravelerapps-20190510113338",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:353058605715:stack/travuttravelerapps-20190510113338/049e5150-72cc-11e9-9ecd-0e7d1a719a58"
+        },
+        "categories": {
+            "auth": {
+                "cognito838d73a9": {}
+            }
+        }
+    }
+}
