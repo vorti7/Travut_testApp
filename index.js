@@ -25,7 +25,7 @@ Navigation.events().registerAppLaunchedListener(() => {
             children: [
               {
                 component: {
-                  name: 'travut.firstScreen'
+                  name: 'travut.introScreen'
                 }
               }
             ]
