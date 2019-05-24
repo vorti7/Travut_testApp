@@ -1,25 +1,45 @@
 import React from 'react';
-import { Container, Button, Text, Header, Footer, FooterTab, Left, Body, Right, Icon } from 'native-base';
-import AuthClass from '../apis/auth'
+import { Text, Content, Card, CardItem, Body } from 'native-base';
 
-import SideMenuSelectedView from '../components/animations/sideMenuSelectedView'
-// import TransformView from '../components/animations/transformView'
+import SideMenuSelectedBasedView from '../components/sideMenuSelectedBasedView'
 import { Navigation } from 'react-native-navigation'
 
 export default class SideMenuSelected02Screen extends React.Component{
     constructor(props) {
         super(props);
     }
-    onclick(){
-    }
     render(){
+        Navigation.mergeOptions(this.props.componentId, {
+            sideMenu: {
+              left: {
+                visible: false,
+                enabled: false
+              },
+            },
+        });
+        console.log('sidemenumain02view : ',this.props.componentId)
         console.log('SideMenuSelected02Screen called')
         return(
-            <SideMenuSelectedView>
-                <Container>
-                    <Text>This is Screen 02</Text>
-                </Container>
-            </SideMenuSelectedView>
+            <SideMenuSelectedBasedView componentId = {this.props.componentId} headerTitle = {"Screen 02"}>
+                <Text>This is Screen 02</Text>
+                <Content padder>
+                    <Card>
+                    <CardItem header bordered>
+                    <Text>Card Header</Text>
+                    </CardItem>
+                    <CardItem>
+                    <Body>
+                        <Text>
+                        Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.Card Body.
+                        </Text>
+                    </Body>
+                    </CardItem>
+                    <CardItem footer>
+                    <Text>Card Footer</Text>
+                    </CardItem>
+                    </Card>
+                </Content>
+            </SideMenuSelectedBasedView>
         )
     }
 }

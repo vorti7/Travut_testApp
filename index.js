@@ -68,34 +68,34 @@ Navigation.events().registerAppLaunchedListener(() => {
       drawBehind: true,
       animate: false,
     },
-    animations: {
-      push: {
-        enable: true,
-        content: {
-          scaleX :{
-            from: 0,
-            to: 1,
-            duration: 500,
-            startDelay: 0,
-            interpolation: 'accelerate'
-          },
-          scaleY :{
-            from: 0,
-            to: 1,
-            duration: 500,
-            startDelay: 0,
-            interpolation: 'accelerate'
-          },
-          alpha: {
-            from: 0,
-            to: 1,
-            duration: 400,
-            startDelay: 100,
-            interpolation: 'accelerate'
-          }
-        }
-      }
-    }
+    // animations: {
+    //   push: {
+    //     enable: true,
+    //     content: {
+    //       scaleX :{
+    //         from: 0,
+    //         to: 1,
+    //         duration: 500,
+    //         startDelay: 0,
+    //         interpolation: 'accelerate'
+    //       },
+    //       scaleY :{
+    //         from: 0,
+    //         to: 1,
+    //         duration: 500,
+    //         startDelay: 0,
+    //         interpolation: 'accelerate'
+    //       },
+    //       alpha: {
+    //         from: 0,
+    //         to: 1,
+    //         duration: 400,
+    //         startDelay: 100,
+    //         interpolation: 'accelerate'
+    //       }
+    //     }
+    //   }
+    // }
   });
   
 });

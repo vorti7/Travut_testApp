@@ -9,6 +9,7 @@
   import modalTestComponent from './modalTest'
   import testComponent from './testView'
   import SideMenuComponent from './sideMenu';
+  import ShowSideMenuButtonComponent from './buttons/showSideMenuButton'
   
   export function registerComponents() {
       Navigation.registerComponent('travut.tab01Component', () => tab01Component);
@@ -20,4 +21,5 @@
       Navigation.registerComponent('travut.modalTestComponent', () => modalTestComponent);
       Navigation.registerComponent('travut.testComponent', () => testComponent);
       Navigation.registerComponent('travut.sideMenuComponent', () => SideMenuComponent);
+      Navigation.registerComponent('travut.button.showSideMenuButtonComponent', () => ShowSideMenuButtonComponent);
     }

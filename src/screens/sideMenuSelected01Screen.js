@@ -1,25 +1,42 @@
 import React from 'react';
-import { Container, Button, Text, Header, Footer, FooterTab, Left, Body, Right, Icon } from 'native-base';
-import AuthClass from '../apis/auth'
+import { Content, Accordion } from 'native-base';
 
-import SideMenuSelectedView from '../components/animations/sideMenuSelectedView'
-// import TransformView from '../components/animations/transformView'
+import SideMenuSelectedBasedView from '../components/sideMenuSelectedBasedView'
 import { Navigation } from 'react-native-navigation'
+
+const dataArray = [
+    { title: "First Element", content: "Lorem ipsum dolor sit amet" },
+    { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
+    { title: "Third Element", content: "Lorem ipsum dolor sit amet" }
+];
 
 export default class SideMenuSelected01Screen extends React.Component{
     constructor(props) {
         super(props);
     }
-    onclick(){
-    }
     render(){
+        Navigation.mergeOptions(this.props.componentId, {
+            sideMenu: {
+              left: {
+                visible: false,
+                enabled: false
+              },
+            },
+        });
+        console.log('sidemenumain01view : ',this.props.componentId)
         console.log('SideMenuSelected01Screen called')
         return(
-            <SideMenuSelectedView>
-                <Container>
-                    <Text>This is Screen 01</Text>
-                </Container>
-            </SideMenuSelectedView>
+            <SideMenuSelectedBasedView componentId = {this.props.componentId} headerTitle = {"Screen 01"}>
+                <Content padder>
+                <Accordion
+                    dataArray={dataArray}
+                    icon="add"
+                    expandedIcon="remove"
+                    iconStyle={{ color: "green" }}
+                    expandedIconStyle={{ color: "red" }}
+                />
+                </Content>
+            </SideMenuSelectedBasedView>
         )
     }
 }

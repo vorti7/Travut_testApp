@@ -17,6 +17,16 @@ export default class IntroScreen extends React.Component{
 
     render(){
         console.log('IntroScreen called')
+
+        // Navigation.mergeOptions(this.props.componentId, {
+        //     topBar: { // disable topbar
+        //         visible: false,
+        //         drawBehind: true,
+        //         animate: false,
+        //     },
+        // });
+
+        
         setTimeout(() => {RNNNavigator.dismissOverlay("introOverlay")}, 3000)
         Navigation.mergeOptions(this.props.componentId, {
             sideMenu: {

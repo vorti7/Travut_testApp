@@ -14,7 +14,8 @@ export default class SideMenuComponent extends React.Component{
         Navigation.mergeOptions(this.props.componentId, {
             sideMenu: {
               'left': {
-                visible: false
+                visible: false,
+                enabled: false
               }
             }
         });
@@ -26,7 +27,6 @@ export default class SideMenuComponent extends React.Component{
     }
     render(){
         console.log('SideMenu Component called')
-
         // console.log('sideMenu : ',this.props.componentId)
         // console.log('sideMenu Selected view num : ',this.state.sideSelectedState)
 
@@ -37,24 +37,27 @@ export default class SideMenuComponent extends React.Component{
                 <Content>
                 <Button full light onPress={() => {
                     this.onclick(0)}}>
-                    <Text>Light</Text>
+                    <Text>0.</Text>
                 </Button>
                 <Button full onPress={() => {
                     this.onclick(1)}}>
-                    <Text>Primary</Text>
+                    <Text>1.</Text>
                 </Button>
                 <Button full success onPress={() => {
                     this.onclick(2)}}>
-                    <Text>Success</Text>
+                    <Text>2.</Text>
                 </Button>
-                <Button full info>
-                    <Text>Info</Text>
+                <Button full info onPress={() => {
+                    this.onclick(3)}}>
+                    <Text>3.</Text>
                 </Button>
-                <Button full warning>
-                    <Text>Warning</Text>
+                <Button full warning onPress={() => {
+                    this.onclick(4)}}>
+                    <Text>4.</Text>
                 </Button>
-                <Button full danger>
-                    <Text>Danger</Text>
+                <Button full danger onPress={() => {
+                    this.onclick(5)}}>
+                    <Text>5.</Text>
                 </Button>
                 <Button full dark>
                     <Text>Dark</Text>
